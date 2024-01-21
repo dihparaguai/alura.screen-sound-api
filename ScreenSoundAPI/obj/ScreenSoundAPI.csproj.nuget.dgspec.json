@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\diego\\Desktop\\c-sharp\\ScreenSound-API\\ScreenSoundAPI\\ScreenSoundAPI\\ScreenSoundAPI.csproj": {}
+    "C:\\Users\\diego\\Desktop\\c-sharp\\ScreenSoundAPI\\ScreenSoundAPI\\ScreenSoundAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\diego\\Desktop\\c-sharp\\ScreenSound-API\\ScreenSoundAPI\\ScreenSoundAPI\\ScreenSoundAPI.csproj": {
+    "C:\\Users\\diego\\Desktop\\c-sharp\\ScreenSoundAPI\\ScreenSoundAPI\\ScreenSoundAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\diego\\Desktop\\c-sharp\\ScreenSound-API\\ScreenSoundAPI\\ScreenSoundAPI\\ScreenSoundAPI.csproj",
+        "projectUniqueName": "C:\\Users\\diego\\Desktop\\c-sharp\\ScreenSoundAPI\\ScreenSoundAPI\\ScreenSoundAPI.csproj",
         "projectName": "ScreenSoundAPI",
-        "projectPath": "C:\\Users\\diego\\Desktop\\c-sharp\\ScreenSound-API\\ScreenSoundAPI\\ScreenSoundAPI\\ScreenSoundAPI.csproj",
+        "projectPath": "C:\\Users\\diego\\Desktop\\c-sharp\\ScreenSoundAPI\\ScreenSoundAPI\\ScreenSoundAPI.csproj",
         "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\diego\\Desktop\\c-sharp\\ScreenSound-API\\ScreenSoundAPI\\ScreenSoundAPI\\obj\\",
+        "outputPath": "C:\\Users\\diego\\Desktop\\c-sharp\\ScreenSoundAPI\\ScreenSoundAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
