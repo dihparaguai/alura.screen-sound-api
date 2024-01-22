@@ -6,6 +6,7 @@ using (HttpClient client = new()) // cria uma variavel com o objeto HttpClient, 
 {
     try
     {
+        Console.WriteLine("Iniciando...");
         string resposta = await client.GetStringAsync("https://guilhermeonrails.github.io/api-csharp-songs/songs.json");
         Console.WriteLine(resposta);
         // Para melhor entendimento: antes de usarmos a classe "HttpClient" na variavel "client", primeiro será executado tudo dentro das chaves, e depois é passado para a variavel "client"
@@ -20,7 +21,8 @@ using (HttpClient client = new()) // cria uma variavel com o objeto HttpClient, 
         
         FiltrosLinq.FiltrarTodosGeneros(musicas);
         OrdernacaoLinq.ArtistasOrdenados(musicas);
-        FiltrosLinq.FiltrarArtistarPorGenero(musicas, "R&B");
+        FiltrosLinq.FiltrarArtistasPorGenero(musicas, "R&B");
+        FiltrosLinq.FiltrarMusicasPorArtista(musicas, "Michel Teló");
     }
     catch (Exception ex)
     {

@@ -15,7 +15,7 @@ internal class FiltrosLinq
 
     }
 
-    public static void FiltrarArtistarPorGenero (List <Musica> musicas, string genero)
+    public static void FiltrarArtistasPorGenero (List <Musica> musicas, string genero)
     {
         var artistasPorGenero = musicas.Where(musica => musica.Genero.Contains(genero)).Select(musica => musica.Artista).Distinct().ToList(); // pega o primeiro parametro, e filtra (Where) os generos se conter (Contains) o valor do segundo parametro, depois seleciona (Select) todos esses artistas dos objetos, sendo não repetidos (Distinct), convertidos numa "list" de string (ToList)
 
@@ -24,5 +24,16 @@ internal class FiltrosLinq
         {
             Console.WriteLine($" --> {artista}"); // exibe cada um dos artistas da list na var "artistasPorGenero"
         }
+    }
+
+    public static void FiltrarMusicasPorArtista (List <Musica> musicas, string artista)
+    {
+        var musicaPorArtista = musicas.Where(musica => musica.Artista.Equals(artista)).Select(musica => musica.Nome).ToList();
+        Console.WriteLine($"\nMusicas Filtadas do Artista {artista}:");
+        foreach (var musica in musicaPorArtista)
+        {
+            Console.WriteLine($" --> {musica}");
+        }
+
     }
 }
