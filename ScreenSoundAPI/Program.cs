@@ -1,4 +1,8 @@
-﻿using (HttpClient client = new HttpClient()) // cria uma variavel com o objeto HttpClient, para usarmos os metodos dele
+﻿
+using ScreenSoundAPI.Modelos;
+using System.Text.Json;
+
+using (HttpClient client = new()) // cria uma variavel com o objeto HttpClient, para usarmos os metodos dele
 {
     try
     {
@@ -8,7 +12,10 @@
         // No caso acima: estamos requisitando ao endereço, todo o conteudo como string, para ser guardada na variavel resposta, e enquanto esta requisição não terminar, a linha vai esperar (await) até que o programa possa continuar
         // O metodo assincrono: garante que tudo da requisição será lido, mesmo que o programa continue executando, enquanto o "await" diz para a variavel "resposta" esperar todo o conteudo ser lido antes de ser atribuido a ela
 
-    } catch (Exception ex)
+        var musicas = JsonSerializer.Deserialize<List<Musica>>(resposta)!; // desserializa (converte) o JSON para um objeto do tipo que a linguagem consegue manipilar
+        Console.WriteLine(musicas.Count);
+    }
+    catch (Exception ex)
     {
         Console.WriteLine($"Temos um probleminha: {ex.Message}"); // caso o endereço da requisição nao esteja disponivel, será gerado um erro, e este erro será capturado, então terá sua mensagem exibida no console
     }
