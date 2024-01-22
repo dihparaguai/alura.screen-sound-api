@@ -20,6 +20,7 @@ using (HttpClient client = new()) // cria uma variavel com o objeto HttpClient, 
         
         FiltrosLinq.FiltrarTodosGeneros(musicas);
         OrdernacaoLinq.ArtistasOrdenados(musicas);
+        FiltrosLinq.FiltrarArtistarPorGenero(musicas, "R&B");
     }
     catch (Exception ex)
     {
