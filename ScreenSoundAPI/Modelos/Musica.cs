@@ -16,7 +16,7 @@ internal class Musica
     public string? Genero { get; set; }
     [JsonPropertyName("key")]
     public int Key { get; set; }
-    public string tonalidade
+    public string Tonalidade
     { 
         get
         {
@@ -30,7 +30,7 @@ internal class Musica
         Console.WriteLine($"Musica: {Nome}");
         Console.WriteLine($"Duração em segundos: {Duracao/1000}");
         Console.WriteLine($"Genero Musical: {Genero}");
-        Console.WriteLine($"Tonalidade: {tonalidade} ({Key})");
+        Console.WriteLine($"Tonalidade: {Tonalidade} ({Key})");
         Console.WriteLine("");
 
     }

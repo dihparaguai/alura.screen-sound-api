@@ -33,6 +33,7 @@ using (HttpClient client = new()) // cria uma variavel com o objeto HttpClient, 
         OrdernacaoLinq.ArtistasOrdenados(musicas);
         FiltrosLinq.FiltrarArtistasPorGenero(musicas, "R&B");
         FiltrosLinq.FiltrarMusicasPorArtista(musicas, "Michel Teló");
+        FiltrosLinq.MusicasCSharp(musicas);
 
         var musicasPreferidasDoDiego = new MusicasPreferidas("Diego");
         musicasPreferidasDoDiego.AdicionarMusicasFavoritas(musicas[99]);

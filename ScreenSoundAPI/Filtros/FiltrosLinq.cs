@@ -36,4 +36,17 @@ internal class FiltrosLinq
         }
 
     }
+
+    public static void MusicasCSharp (List<Musica> musicas)
+    {
+        var musicasCSharp = musicas
+            .Where(musica => musica.Tonalidade.Equals("C#"))
+            .Select(musica => musica.Nome)
+            .ToList();
+        Console.WriteLine("\nMusicas de Tonalidade C#:");
+        foreach (var musica in musicasCSharp)
+        {
+            Console.WriteLine($"{musica}");
+        }
+    }
 }
