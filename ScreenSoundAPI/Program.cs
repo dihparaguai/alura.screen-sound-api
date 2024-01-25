@@ -14,7 +14,17 @@ using (HttpClient client = new()) // cria uma variavel com o objeto HttpClient, 
         // O metodo assincrono: garante que tudo da requisição será lido, mesmo que o programa continue executando, enquanto o "await" diz para a variavel "resposta" esperar todo o conteudo ser lido antes de ser atribuido a ela
 
         var musicas = JsonSerializer.Deserialize<List<Musica>>(resposta)!; // desserializa (converte) o JSON para um objeto do tipo que a linguagem consegue manipilar
-        musicas[0].ExibirDetalhesMusica();
+        musicas[2].ExibirDetalhesMusica();
+        musicas[12].ExibirDetalhesMusica();
+        musicas[24].ExibirDetalhesMusica();
+        musicas[36].ExibirDetalhesMusica();
+        musicas[48].ExibirDetalhesMusica();
+        musicas[50].ExibirDetalhesMusica();
+        musicas[52].ExibirDetalhesMusica();
+        musicas[64].ExibirDetalhesMusica();
+        musicas[76].ExibirDetalhesMusica();
+        musicas[89].ExibirDetalhesMusica();
+        musicas[97].ExibirDetalhesMusica();
 
         Console.WriteLine($"Quantidade de Musicas: {musicas.Count}\n");
 
@@ -36,6 +46,9 @@ using (HttpClient client = new()) // cria uma variavel com o objeto HttpClient, 
         musicasPreferidasDoDiego.AdicionarMusicasFavoritas(musicas[11]);
         musicasPreferidasDoDiego.AdicionarMusicasFavoritas(musicas[1]);
         musicasPreferidasDoDiego.ExibirMusicasFavoritas();
+
+        musicasPreferidasDoDiego.GerarArquivoJson();
+
 
     }
     catch (Exception ex)
