@@ -23,6 +23,20 @@ using (HttpClient client = new()) // cria uma variavel com o objeto HttpClient, 
         OrdernacaoLinq.ArtistasOrdenados(musicas);
         FiltrosLinq.FiltrarArtistasPorGenero(musicas, "R&B");
         FiltrosLinq.FiltrarMusicasPorArtista(musicas, "Michel Teló");
+
+        var musicasPreferidasDoDiego = new MusicasPreferidas("Diego");
+        musicasPreferidasDoDiego.AdicionarMusicasFavoritas(musicas[99]);
+        musicasPreferidasDoDiego.AdicionarMusicasFavoritas(musicas[88]);
+        musicasPreferidasDoDiego.AdicionarMusicasFavoritas(musicas[77]);
+        musicasPreferidasDoDiego.AdicionarMusicasFavoritas(musicas[66]);
+        musicasPreferidasDoDiego.AdicionarMusicasFavoritas(musicas[55]);
+        musicasPreferidasDoDiego.AdicionarMusicasFavoritas(musicas[44]);
+        musicasPreferidasDoDiego.AdicionarMusicasFavoritas(musicas[33]);
+        musicasPreferidasDoDiego.AdicionarMusicasFavoritas(musicas[22]);
+        musicasPreferidasDoDiego.AdicionarMusicasFavoritas(musicas[11]);
+        musicasPreferidasDoDiego.AdicionarMusicasFavoritas(musicas[1]);
+        musicasPreferidasDoDiego.ExibirMusicasFavoritas();
+
     }
     catch (Exception ex)
     {
